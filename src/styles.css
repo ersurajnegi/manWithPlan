@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+.custom-select{
+		border: none;
+		border-bottom: 1px solid #009cdc;
+		border-radius: 0;
+		width: 100px;
+		text-align: right;
+		background: none;
+		width:200px;
+		-webkit-box-shadow: none; 
+		box-shadow: none;
+		float: right;
+	}
+	.custom-select:focus, .custom-select:active
+	{
+		outline: none !important;
+	}
+	.custom-select option{
+		padding: 5px 0;
+		border-bottom: 1px solid grey;
+	}
+	.caret{
+		color: #009cdc;
+	}
+	#right-container{
+		
+		border-left: 1px solid grey;
+		padding-left: 30px;
+		height: 600px;
+		overflow: auto;	
+	}
+	.quarter-header{
+		position: absolute;
+		top: -15px;
+		left: 15px;
+		background: white;
+		font-size: 20px;
+		padding: 0 5px;
+		color: #009cdc;
+	}
+	.custom-row{
+		margin: 35px 0px 10px 0;
+	}
+	.quarter-container{
+		position: relative;
+		border-top: 1px solid #009cdc;
+		padding-top: 20px;
+		position: relative;
+	}
+	.custom-input{
+		border: none;
+		border-bottom: 1px solid #009cdc;
+		border-radius: 0;
+		background: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	#right-container .custom-input:focus,#right-container .custom-input:active,#right-container .custom-input:hover
+	{
+		outline: none !important;
+		-webkit-appearance:none;
+	}
+	#right-container .add-goal-button{
+		border-radius: 4px;
+	}
+	.goal-container{
+		margin-top: 25px;
+	}
+	.goal-number{
+		position:absolute;
+		left:0px;
+	}
+	.goal-description{
+		margin-top:0px;
+		padding-left: 15px;
+		position: relative;	
+	}
