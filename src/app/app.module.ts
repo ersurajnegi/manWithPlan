@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
-import { GoalComponent } from './goal/goal.component';
 
 import {ApiService } from './common/services/api.service';
 import { AppselectComponent } from './common/components/appselect/appselect.component';
@@ -17,7 +16,6 @@ import { AppselectComponent } from './common/components/appselect/appselect.comp
     AppComponent,
     HeaderComponent,
     ProfileComponent,
-    GoalComponent,
     AppselectComponent
   ],
   imports: [
