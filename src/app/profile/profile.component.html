@@ -1,19 +1,29 @@
-<div class="row" *ngIf="userDetails">
+<div class="row" *ngIf="userData">
 
   <div class="col-md-3 col-lg-3">
 
     <div class="thumbnail">
-      <img src="{{userDetails.imageUrl}}" alt="Your Image">
+      <img src="{{userData.userDetails.imageUrl}}" alt="Your Image">
     </div>
     <ul class="list-group">
-      <li class="list-group-item"><strong>Username: </strong>{{userDetails.name}}</li>
+      <li class="list-group-item"><strong>Username: </strong>{{userData.userDetails.name}}</li>
       <li class="list-group-item"><strong>Location: </strong>Bangalore</li>
-      <li class="list-group-item"><strong>Designation: </strong>{{userDetails.designation}}</li>
+      <li class="list-group-item"><strong>Designation: </strong>{{userData.userDetails.designation}}</li>
     </ul>
   </div>
 
   <div class="col-md-9 col-lg-9 " id="right-container">
-    <!--<div class="form-group " style="height: 35px;">
+    
+    <div class="row custom-row">
+      <app-goal [goals]="userData.GoalsQ1"></app-goal>
+      <app-goal [goals]="userData.GoalsQ2"></app-goal>
+      <app-goal [goals]="userData.GoalsQ3"></app-goal>
+      <app-goal [goals]="userData.GoalsQ4"></app-goal>
+      
+    </div>
+  </div>
+</div>
+<!--<div class="form-group " style="height: 35px;">
       <select id="company" class="form-control custom-select">
 					  <option>2016</option>
 					  <option selected>2015</option>
@@ -21,7 +31,3 @@
 					</select>
 
     </div>-->
-    <div class="row custom-row">
-      <app-goal></app-goal>
-    </div>
-  </div>

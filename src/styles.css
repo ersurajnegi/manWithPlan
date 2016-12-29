@@ -41,6 +41,9 @@
 	.custom-row{
 		margin: 35px 0px 10px 0;
 	}
+	.custom-row .custom-check-box{
+		    margin-left: 10px;
+	}
 	.quarter-container{
 		position: relative;
 		border-top: 1px solid #009cdc;
@@ -74,4 +77,20 @@
 		margin-top:0px;
 		padding-left: 15px;
 		position: relative;	
+	}
+
+	.list-group-item strong{
+		padding-left:0px;
+	}
+
+	.custom-icon{
+		font-size: 20px;
+		float: right;
+	}
+
+	.done-icon{
+		color: green;
+	}
+	.label-warning{
+		padding: 6px;
 	}
