@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import {ApiService } from './common/services/api.service';
+import { ApiService } from './common/services/api.service';
 import { AppselectComponent } from './common/components/appselect/appselect.component';
+import { GoalComponent } from './goal/goal.component';
 
 
 @NgModule({
@@ -16,14 +17,15 @@ import { AppselectComponent } from './common/components/appselect/appselect.comp
     AppComponent,
     HeaderComponent,
     ProfileComponent,
-    AppselectComponent
+    AppselectComponent,
+    GoalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

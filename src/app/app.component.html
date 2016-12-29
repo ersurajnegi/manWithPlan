@@ -1,6 +1,7 @@
 <app-header [title]="title">
 </app-header>
 <div class="container">
-
-<app-profile></app-profile>
+    <div *ngIf="userData">
+        <app-profile [userDetails]="userData.userDetails"></app-profile>
+    </div>
 </div>
