@@ -94,3 +94,24 @@
 	.label-warning{
 		padding: 6px;
 	}
+
+	.custom-icon-container
+	{
+		width:30px;
+		height:30px;
+		border-radius:50%;
+		border: 1px solid;
+		position:relative;
+	}
+	.custom-icon-container:hover{
+		border: 1px solid #009cdc;
+	}
+	.custom-icon-container.done-border
+	{
+		border: 1px solid green;
+	}
+	.custom-icon-container span{
+		position: absolute;
+		top: 4px;
+		left: 4px;
+	}

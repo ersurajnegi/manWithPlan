@@ -15,7 +15,6 @@ export class ApiService {
    getUserData(){
       return this._http.get(this._apiUrl)
               .map(res => {
-                console.log("res : " + res);
                 return res.json();
               });
    }
