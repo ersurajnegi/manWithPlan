@@ -6,10 +6,10 @@ import { Component, OnInit, Input,OnChanges } from '@angular/core';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnChanges {
-  @Input() goals:any [];
+  @Input() goal:any [];
 
   ngOnChanges() {
-    console.log("Goals : " + this.goals);
+    console.log("Goals : " + this.goal);
   }
 
 

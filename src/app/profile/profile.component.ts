@@ -26,4 +26,84 @@ export class ProfileComponent implements OnInit, OnChanges {
         console.log(this.userData);
       })
   }
+
+  changeData(){
+    this.userData = {
+  "userDetails": {
+    "name": "Suraj Negi",
+    "designation": "Developer",
+    "imageUrl": "https://avatars.githubusercontent.com/u/16935216?v=3"
+  },
+  "goalsArray": [
+    {
+      "quarterNo": 1,
+      "goals": [
+        {
+          "description": "Learn Angular",
+          "status": "Done"
+        },
+        {
+          "description": "Learn sacc",
+          "status": "InProgress"
+        },
+        {
+          "description": "Learn Jquery",
+          "status": "Done"
+        }
+      ]
+    },
+    {
+      "quarterNo": 2,
+      "goals": [
+        {
+          "description": "Learn Angular",
+          "status": "Done"
+        },
+        {
+          "description": "Learn sacc",
+          "status": "InProgress"
+        },
+        {
+          "description": "Learn Jquery",
+          "status": "Done"
+        }
+      ]
+    },
+    {
+      "quarterNo": 3,
+      "goals": [
+        {
+          "description": "Learn Angular",
+          "status": "Done"
+        },
+        {
+          "description": "Learn sacc",
+          "status": "InProgress"
+        },
+        {
+          "description": "Learn Jquery",
+          "status": "Done"
+        }
+      ]
+    },
+    {
+      "quarterNo": 4,
+      "goals": [
+        {
+          "description": "Learn Angular",
+          "status": "Done"
+        },
+        {
+          "description": "Learn sacc",
+          "status": "Done"
+        },
+        {
+          "description": "Learn Jquery",
+          "status": "Done"
+        }
+      ]
+    }
+  ]
+}
+  }
 }

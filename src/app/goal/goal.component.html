@@ -1,5 +1,5 @@
 <div class="quarter-container">
-  <span class="quarter-header">Quarter 1</span>
+  <span class="quarter-header">Quarter {{goal.quarterNo}}</span>
   <div class="input-group">
     <input type="text" class="form-control custom-input" style="width: 98%;" placeholder="Quick add for Goal">
     <span class="input-group-btn">
@@ -10,7 +10,7 @@
 
     <div class="row custom-row">
       <ul class="list-group">
-        <li *ngFor=" let goal of goals" class="list-group-item clearfix">
+        <li *ngFor=" let goal of goal.goals" class="list-group-item clearfix">
           <strong class="col-md-10">{{goal.description}} </strong>
           <div class="col-md-2">
             <span class="glyphicon glyphicon-ok custom-icon done-icon" aria-hidden="true" *ngIf="goal.status =='Done'"></span>
