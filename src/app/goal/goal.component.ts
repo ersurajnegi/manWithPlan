@@ -1,5 +1,4 @@
-import { Component, OnInit, Input,OnChanges } from '@angular/core';
-
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 @Component({
   selector: 'app-goal',
   templateUrl: './goal.component.html',
@@ -13,12 +12,14 @@ export class GoalComponent implements OnChanges {
     console.log("Goals : " + this.goal);
   }
 
-  addGoal(){
-      this.goal.goals.push({description: this.title ,status:'InProgress'});
-      this.title = "";
+  addGoal() {
+    if (this.title) {
+        this.goal.goals.push({ description: this.title, status: 'InProgress' });
+        this.title = "";
+    }
   }
 
-  changeGoalStatus(index){
-      this.goal.goals[index].status ="Done";
+  changeGoalStatus(index) {
+    this.goal.goals[index].status = "Done";
   }
 }

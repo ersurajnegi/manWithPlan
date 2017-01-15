@@ -6,104 +6,33 @@ import {ApiService } from '../common/services/api.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit, OnChanges {
-
-  ngOnChanges() {
-    //console.log("data from parent : " + this.userDetails);
-  }
-
+export class ProfileComponent implements OnInit {
   userData: any;
+  currentYear: number;
+  yearsArray: Array<any> = [];
   ngOnInit() {
-    this.getData();
+    this.generateYearArray();
+    this.getData(this.currentYear);
+    
   }
   constructor(private _apiService: ApiService) {
   }
 
-  getData() {
-    this._apiService.getUserData()
+  getData(year) {
+    this._apiService.getUserData(year)
       .subscribe(data => {
         this.userData = data;
         console.log(this.userData);
       })
   }
+  indexChanged($event){
+    console.log($event);
+  }
+  generateYearArray(){
+        this.currentYear = new Date().getFullYear();
 
-  changeData(){
-    this.userData = {
-  "userDetails": {
-    "name": "Suraj Negi",
-    "designation": "Developer",
-    "imageUrl": "https://avatars.githubusercontent.com/u/16935216?v=3"
-  },
-  "goalsArray": [
-    {
-      "quarterNo": 1,
-      "goals": [
-        {
-          "description": "Learn Angular",
-          "status": "Done"
-        },
-        {
-          "description": "Learn sacc",
-          "status": "InProgress"
-        },
-        {
-          "description": "Learn Jquery",
-          "status": "Done"
+        for(let i=this.currentYear - 2;i<this.currentYear + 2; i++){
+          this.yearsArray.push({label: i, value: i});
         }
-      ]
-    },
-    {
-      "quarterNo": 2,
-      "goals": [
-        {
-          "description": "Learn Angular",
-          "status": "Done"
-        },
-        {
-          "description": "Learn sacc",
-          "status": "InProgress"
-        },
-        {
-          "description": "Learn Jquery",
-          "status": "Done"
-        }
-      ]
-    },
-    {
-      "quarterNo": 3,
-      "goals": [
-        {
-          "description": "Learn Angular",
-          "status": "Done"
-        },
-        {
-          "description": "Learn sacc",
-          "status": "InProgress"
-        },
-        {
-          "description": "Learn Jquery",
-          "status": "Done"
-        }
-      ]
-    },
-    {
-      "quarterNo": 4,
-      "goals": [
-        {
-          "description": "Learn Angular",
-          "status": "Done"
-        },
-        {
-          "description": "Learn sacc",
-          "status": "Done"
-        },
-        {
-          "description": "Learn Jquery",
-          "status": "Done"
-        }
-      ]
-    }
-  ]
-}
   }
 }

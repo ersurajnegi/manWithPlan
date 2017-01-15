@@ -1,5 +1,7 @@
 <div class="row" *ngIf="userData">
-<button (click)="changeData()"></button>
+
+  <app-select [defaultValue]="currentYear" [optionsArray]="yearsArray" (indexChanged)= "indexChanged($event)"></app-select>
+
   <div class="col-md-3 col-lg-3">
 
     <div class="thumbnail">
@@ -13,23 +15,14 @@
   </div>
 
   <div class="col-md-9 col-lg-9 " id="right-container">
-    
+
     <div class="row custom-row">
       <div *ngFor="let goal of userData.goalsArray">
-            <app-goal [goal]="goal" ></app-goal>
+        <app-goal [goal]="goal"></app-goal>
       </div>
-      <!--<app-goal [goals]="userData.GoalsQ2"></app-goal>
-      <app-goal [goals]="userData.GoalsQ3"></app-goal>
-      <app-goal [goals]="userData.GoalsQ4"></app-goal>-->
-      
+
     </div>
   </div>
 </div>
-<!--<div class="form-group " style="height: 35px;">
-      <select id="company" class="form-control custom-select">
-					  <option>2016</option>
-					  <option selected>2015</option>
-					  <option>2014</option>
-					</select>
 
-    </div>-->
+<app-select [defaultValue]="currentYear" [optionsArray]="yearsArray" (indexChanged)= "indexChanged($event)"></app-select>
