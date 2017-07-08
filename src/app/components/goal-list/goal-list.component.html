@@ -1,0 +1,26 @@
+
+
+<div class="col-lg-6 goal-list" >
+  <div class="goals-container">
+    <div class="container-header">
+      <h4 class="quarter-number">Quarter {{goalsData.quarterNo}}</h4>
+    </div>
+    <form class="form-horizontal quick-add-goal">
+      <div class="form-group">
+        <input type="text" placeholder="Add your goal here & press Enter!" class="form-control" id="inputWarning" 
+          (keyup.enter)="addGoal(goalTitle.value)" #goalTitle>
+      </div>
+      <div appLoader *ngIf="isAdding"></div>
+    </form>
+    <div id="goal-list-container">
+      <ul class="list-group" appCustomScroller>
+        <app-goal-item [goalItem]="goalItem"  [quarterNumber]="goalsData.quarterNo" 
+          (deleteEvent)="deleteGoal($event)"  (changeStatus)="goalUpdated($event)"  *ngFor="let goalItem of goalsData.goals;" >
+
+        </app-goal-item>
+        
+      </ul>
+    </div>
+  </div>
+
+</div>

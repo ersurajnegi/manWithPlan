@@ -1,0 +1,18 @@
+<li class="list-group-item no-radius {{goalItem.status}}">
+  <div appLoader *ngIf="isLoading"></div>
+  <div class="goal-detail">
+    {{goalItem.description}}
+  </div>
+  <div class="status-container">
+    <div class="action-container">
+      <span aria-hidden="true">
+        <i class="fa fa-times" aria-hidden="true" (click) = "deleteGoal(goalItem.id)"></i>
+      </span>
+    </div>
+    <div class="action-container">
+      <span aria-hidden="true">
+        <i class="fa fa-check" aria-hidden="true" (click) = "changeGoalStatus(goalItem)" ></i>
+      </span>
+    </div>
+  </div>
+</li>

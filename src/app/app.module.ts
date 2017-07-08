@@ -4,21 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ProfileComponent } from './profile/profile.component';
-
 import { ApiService } from './common/services/api.service';
-import { AppselectComponent } from './common/components/appselect/appselect.component';
-import { GoalComponent } from './goal/goal.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { GoalListComponent } from './components/goal-list/goal-list.component';
+import { GoalItemComponent } from './components/goal-item/goal-item.component';
+import { CustomScrollerDirective } from './directives/customScroller/custom-scroller.directive';
+import { LoaderDirective } from './directives/loader/loader.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     ProfileComponent,
-    AppselectComponent,
-    GoalComponent
+    GoalListComponent,
+    GoalItemComponent,
+    CustomScrollerDirective,
+    LoaderDirective
   ],
   imports: [
     BrowserModule,

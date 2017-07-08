@@ -1,0 +1,74 @@
+@import "../../../assets/_constants";
+.goal-list
+{
+    height: 400px;
+    padding-bottom: 20px;
+}
+.goals-container
+    {
+        height: calc(100% - 20px);
+        -webkit-box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.6);
+        border: 1px solid $cocpit-light-gray;
+        background-color: $white;
+        padding-left: 0;
+        padding-right: 0;
+        .container-header
+        {
+            background-color: $cockpit-light-gray-1;
+            border-bottom: 2px solid $cockpit-blue;
+            border-top: 1px solid $white;
+            padding: 9px 10px 10px 2px;
+            clear: both;
+        }
+        .quarter-number
+        {
+            padding: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            margin: 0 0 0 6px;
+            color:$cockpit-dark-gray;
+            line-height: 1;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .quick-add-goal
+        {
+            padding: 10px 30px;
+            border-bottom: 2px solid $cockpit-light-gray-1;
+            position: relative;  
+            input
+            {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid $cockpit-light-gray-1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                border-radius: 0;
+                &:hover,&:focus
+                {
+                    border-color: $cockpit-blue;
+                }
+            }
+            .form-control
+            {
+                box-shadow: none;
+                &:focus 
+                {
+                    box-shadow: none;
+                }
+            }
+        }
+    #goal-list-container
+    {
+        height: calc(100% - 120px);
+        ul
+        {
+            height: calc(100% - 10px);
+            margin-bottom: 0;
+            padding: 5px 10px;
+        }
+        
+    }   
+}

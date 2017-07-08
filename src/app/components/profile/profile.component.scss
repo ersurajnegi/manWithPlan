@@ -1,0 +1,14 @@
+@import '../../../assets/_constants';
+.thumbnail {
+    border: none;
+    img
+    {
+        width:200px;
+        height: 200px;
+        border: 1px solid $cockpit-blue;
+    }
+}
+.deatils-container
+{
+    margin-top:40px;
+}

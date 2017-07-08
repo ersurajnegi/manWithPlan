@@ -1,5 +1,16 @@
-<app-header [title]="title">
-</app-header>
-<div class="container">
-    <app-profile></app-profile>
+<div id="app-container-wrapper" class="container-fluid">
+    <div class="app-container">
+        <div class="container-column-header">
+            <h4 class="app-title-header">Man with the plan</h4>
+        </div>
+        
+        <div *ngIf="!userData;else other_content">
+            <div appLoader></div>
+        </div>
+        <ng-template #other_content>
+            <div id="goals-container-wrapper" class="row" appCustomScroller>
+                <app-goal-list [goalsData]="goals" *ngFor="let goals of userData.goalsArray;"></app-goal-list>
+            </div>
+        </ng-template>
+    </div>
 </div>
