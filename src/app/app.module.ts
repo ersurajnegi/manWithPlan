@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { MalihuCustomScrollerModule } from 'ngx-malihu-scroller';
 import { AppComponent } from './app.component';
 import { ApiService } from './common/services/api.service';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -24,7 +24,8 @@ import { LoaderDirective } from './directives/loader/loader.directive';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+   MalihuCustomScrollerModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

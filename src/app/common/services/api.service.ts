@@ -7,8 +7,8 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 @Injectable()
 export class ApiService {
 
-  // private _apiUrl:string = 'https://api.myjson.com/bins/1fjl37';
-  private _apiUrl: string = '/api/Values';
+  private _apiUrl:string = 'https://api.myjson.com/bins/sm7jf';
+  // private _apiUrl: string = '/api/Values';
   constructor(private _http: Http) {
   }
   getUserData() {

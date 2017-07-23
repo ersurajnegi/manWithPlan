@@ -13,7 +13,7 @@
       <div appLoader *ngIf="isAdding"></div>
     </form>
     <div id="goal-list-container">
-      <ul class="list-group" appCustomScroller>
+      <ul class="list-group" >
         <app-goal-item [goalItem]="goalItem"  [quarterNumber]="goalsData.quarterNo" 
           (deleteEvent)="deleteGoal($event)"  (changeStatus)="goalUpdated($event)"  *ngFor="let goalItem of goalsData.goals;" >
 

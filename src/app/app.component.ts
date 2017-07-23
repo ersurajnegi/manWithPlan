@@ -12,8 +12,14 @@ export class AppComponent implements OnInit {
   ) { }
   title: string = "Man With The Plan"
   userData: any = null;
+  options: any = null;
   ngOnInit() {
+    this.options = {
+      theme: "dark-thick",
+      axis: "y"
+    }
     this.getData();
+    
   }
 
 
@@ -23,5 +29,26 @@ export class AppComponent implements OnInit {
         this.userData = data;
         console.log(this.userData);
       })
+  }
+  onCreate($event) {
+    console.log('Create scroller done');
+  }
+  onInit($event) {
+    console.log('Init scroller done');
+  }
+  onScrollStart($event) {
+    console.log('Scoll started');
+  }
+  onScroll($event) {
+    console.log('on scroll done');
+  }
+  whileScrolling($event) {
+    console.log('while scrolling done');
+  }
+  onTotalScroll($event) {
+    console.log('total scroller done');
+  }
+  onTotalScrollBack($event) {
+    console.log('total scroller call back done');
   }
 }

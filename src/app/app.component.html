@@ -8,7 +8,15 @@
             <div appLoader></div>
         </div>
         <ng-template #other_content>
-            <div id="goals-container-wrapper" class="row" appCustomScroller>
+            <div id="goals-container-wrapper" class="row" malihuCustomScroller 
+            [scrollOptions] = "options" 
+            (onCreate)="onCreate()"
+            (onInit)="onInit()"
+            (onScrollStart)="onScrollStart()"
+            (onScroll)="onScroll()"
+            (whileScrolling)="whileScrolling()"
+            (onTotalScroll)="onTotalScroll()"
+            (onTotalScrollBack)="onTotalScrollBack()"  >
                 <app-goal-list [goalsData]="goals" *ngFor="let goals of userData.goalsArray;"></app-goal-list>
             </div>
         </ng-template>
